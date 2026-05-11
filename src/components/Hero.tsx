@@ -6,77 +6,96 @@ import { initGSAP, gsap } from '@/lib/gsap-init'
 
 export default function Hero() {
   const { t } = useLanguage()
+  const badgeRef = useRef<HTMLSpanElement>(null)
   const titleRef = useRef<HTMLDivElement>(null)
-  const taglineRef = useRef<HTMLParagraphElement>(null)
-  const scrollRef = useRef<HTMLSpanElement>(null)
+  const contentRef = useRef<HTMLDivElement>(null)
   const imageRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     initGSAP()
 
     const tl = gsap.timeline({ delay: 0.2 })
-
-    tl.fromTo(
-      titleRef.current,
-      { y: 60, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1.2, ease: 'power2.out' }
-    )
+    tl.fromTo(badgeRef.current, { y: 12, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out' })
       .fromTo(
-        taglineRef.current,
-        { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out' },
-        '-=0.8'
-      )
-      .fromTo(
-        scrollRef.current,
-        { opacity: 0 },
-        { opacity: 1, duration: 0.6 },
+        titleRef.current!.querySelectorAll('span'),
+        { y: 8, opacity: 0, filter: 'blur(14px)' },
+        { y: 0, opacity: 1, filter: 'blur(0px)', duration: 0.75, ease: 'power2.out', stagger: 0.07 },
         '-=0.4'
       )
-      .fromTo(
-        imageRef.current,
-        { opacity: 0, scale: 1.05 },
-        { opacity: 1, scale: 1, duration: 1.4, ease: 'power2.out' },
-        0.3
-      )
+      .fromTo(contentRef.current, { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out' }, '-=0.5')
+      .fromTo(imageRef.current, { opacity: 0, scale: 1.04 }, { opacity: 1, scale: 1, duration: 1.4, ease: 'power2.out' }, 0.3)
 
     gsap.to(imageRef.current, {
-      y: -80,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: imageRef.current,
-        start: 'top top',
-        end: 'bottom top',
-        scrub: true,
-      },
+      y: -60, ease: 'none',
+      scrollTrigger: { trigger: imageRef.current, start: 'top top', end: 'bottom top', scrub: true },
     })
 
     return () => { tl.kill() }
   }, [])
 
+  const openModal = () => window.dispatchEvent(new CustomEvent('openContactModal'))
+
   return (
-    <section className="relative h-screen flex overflow-hidden bg-graphite">
-      {/* Left half */}
-      <div className="w-full md:w-1/2 flex flex-col justify-end pb-16 pl-8 md:pl-16 z-10">
-        <div ref={titleRef} style={{ opacity: 0 }}>
-          <h1 className="font-unbounded font-bold text-[18vw] md:text-[10vw] leading-[0.9] tracking-tight text-muted-white">
-            AFTER<br />HUMAN
+    <section className="relative min-h-screen flex overflow-hidden bg-graphite">
+      {/* Left column */}
+      <div className="page-pad relative w-full md:w-1/2 flex flex-col justify-center pt-28 pb-16 z-10 gap-8">
+        <span
+          ref={badgeRef}
+          style={{ opacity: 0, alignSelf: 'flex-start' }}
+          className="font-unbounded text-sm tracking-[0.15em] text-silver uppercase"
+        >
+          {t.hero.badge}
+        </span>
+
+        <div ref={titleRef}>
+          <h1 className="font-unbounded font-bold leading-[0.88] tracking-tight text-muted-white"
+            style={{ fontSize: 'clamp(3rem, 10vw, 8rem)' }}>
+            {'AFTER'.split('').map((ch, i) => (
+              <span key={i} style={{ opacity: 0, display: 'inline-block' }}>{ch}</span>
+            ))}
+            <br />
+            {'HUMAN'.split('').map((ch, i) => (
+              <span key={5 + i} style={{ opacity: 0, display: 'inline-block' }}>{ch}</span>
+            ))}
           </h1>
         </div>
-        <p
-          ref={taglineRef}
-          className="font-inter text-xs md:text-sm tracking-[0.3em] text-silver mt-6"
-          style={{ opacity: 0 }}
-        >
-          {t.hero.tagline}
-        </p>
-        <span
-          ref={scrollRef}
-          className="font-inter text-xs tracking-[0.3em] text-silver/40 mt-16"
-          style={{ opacity: 0 }}
-        >
-          ↓ {t.hero.scroll}
-        </span>
+
+        <div ref={contentRef} style={{ opacity: 0 }} className="flex flex-col gap-6">
+          <p className="font-unbounded text-sm text-muted-white leading-relaxed">
+            {t.hero.description}
+          </p>
+
+          <hr className="border-t border-white/10" />
+
+          <div className="flex items-start gap-10">
+            {t.hero.stats.map((stat, i) => (
+              <div key={i} className="flex flex-col gap-1">
+                <span className="font-unbounded text-sm text-muted-white">
+                  {stat.value}{stat.unit ? <> {stat.unit}</> : null}
+                </span>
+                <span className="font-unbounded text-sm text-silver/50">{stat.label}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap gap-3">
+            <button
+              onClick={() => document.getElementById('showreel')?.scrollIntoView({ behavior: 'smooth' })}
+              className="font-unbounded text-sm tracking-[0.1em] border border-white/30 text-muted-white hover:border-white/60 transition-colors"
+              style={{ padding: '15px' }}
+            >
+              {t.hero.cta.showreel}
+            </button>
+            <button
+              onClick={openModal}
+              className="font-unbounded text-sm tracking-[0.1em] bg-muted-white text-graphite hover:opacity-90 transition-opacity"
+              style={{ padding: '15px' }}
+            >
+              {t.hero.cta.contact}
+            </button>
+          </div>
+
+        </div>
       </div>
 
       {/* Right half — visual */}
@@ -90,7 +109,7 @@ export default function Hero() {
           alt="After Human"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-graphite via-graphite/60 to-transparent md:via-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-graphite via-graphite/70 to-transparent" />
       </div>
     </section>
   )
