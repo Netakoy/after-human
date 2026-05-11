@@ -1,98 +1,42 @@
 'use client'
 
+import Link from 'next/link'
 import { useLanguage } from '@/lib/language'
-import CaseSection from './CaseSection'
-
-const casesData = [
-  {
-    id: 'oxyterra',
-    index: '001',
-    titleRu: 'OXYTERRA',
-    titleEn: 'OXYTERRA',
-    descriptionRu: 'Cinematic product визуализация для промышленного бренда. Macro-съёмка и AI-motion.',
-    descriptionEn: 'Cinematic product visualization for an industrial brand. Macro shots and AI motion.',
-    kinescopeId: 'iQrV4TBCLccUmq1HiDSGYG',
-    posterSrc: '/images/cases/oxyterra.png',
-    gallery: [
-      '/images/cases/oxyterra-1.png',
-      '/images/cases/oxyterra-2.png',
-    ],
-  },
-  {
-    id: 'ai-doc',
-    index: '002',
-    titleRu: 'ДОКУМЕНТАЛЬНАЯ КОРОТКОМЕТРАЖКА',
-    titleEn: 'AI SHORT DOCUMENTARY',
-    descriptionRu: 'Короткометражный документальный фильм о развитии искусственного интеллекта.',
-    descriptionEn: 'A short documentary film about the development of artificial intelligence.',
-    kinescopeId: 'woSrEnNNVNBtD4gSbskW1q',
-    posterSrc: '/images/cases/oxyterra.png',
-    gallery: [],
-  },
-  {
-    id: 'kinopoisk',
-    index: '003',
-    titleRu: 'КИНОПОИСК',
-    titleEn: 'KINOPOISK',
-    descriptionRu: 'Motion graphics и анимация для крупнейшей кинобазы Рунета.',
-    descriptionEn: "Motion graphics and animation for Russia's largest film database.",
-    kinescopeId: '5xC7AXeEZeKy2PtU4sszQA',
-    posterSrc: '/images/cases/kinopoisk.png',
-    gallery: [],
-  },
-  {
-    id: 'technopark',
-    index: '004',
-    titleRu: 'ТЕХНОПАРК',
-    titleEn: 'TECHNOPARK',
-    descriptionRu: 'Architectural render и cinematic presentation технопарка.',
-    descriptionEn: 'Architectural render and cinematic presentation of a technology park.',
-    kinescopeId: '36PmNJH1rdbUswU7UHodLL',
-    posterSrc: '/images/cases/technopark-1.png',
-    gallery: [],
-  },
-  {
-    id: 'african-clip',
-    index: '005',
-    titleRu: 'АФРИКАНСКИЙ КЛИП',
-    titleEn: 'AFRICAN MUSIC VIDEO',
-    descriptionRu: 'Музыкальный клип с AI-генерацией и кинематографической режиссурой.',
-    descriptionEn: 'Music video with AI generation and cinematic direction.',
-    kinescopeId: 'eUfwrUseNsesFui2zqBBUg',
-    posterSrc: '/images/cases/african-clip.png',
-    gallery: [
-      '/images/cases/african-clip-1.png',
-    ],
-  },
-  {
-    id: 'bali',
-    index: '006',
-    titleRu: 'ДЖИН НА БАЛИ',
-    titleEn: 'GIN IN BALI',
-    descriptionRu: 'Cinematic AI-видео для алкогольного бренда на Бали.',
-    descriptionEn: 'Cinematic AI-video for a spirits brand in Bali.',
-    kinescopeId: 'fq94xmGyhYV8hD5J1FC2Kg',
-    posterSrc: '/images/cases/Bali.png',
-    gallery: [],
-  },
-]
+import { casesData } from '@/data/cases'
 
 export default function Cases() {
-  const { language } = useLanguage()
+  const { language, t } = useLanguage()
 
   return (
-    <section id="cases">
-      {casesData.map((c) => (
-        <CaseSection
-          key={c.id}
-          index={c.index}
-          title={language === 'ru' ? c.titleRu : c.titleEn}
-          description={language === 'ru' ? c.descriptionRu : c.descriptionEn}
-          posterSrc={c.posterSrc}
-          kinescopeId={c.kinescopeId}
-          gallery={c.gallery}
-        />
-      ))}
+    <section id="cases" className="bg-graphite py-24 px-8 md:px-16">
+      <p className="font-inter text-xs tracking-[0.3em] text-silver mb-16">
+        {t.cases.title}
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {casesData.map((c) => (
+          <Link
+            key={c.id}
+            href={`/cases/${c.id}`}
+            className="group relative aspect-video overflow-hidden block"
+          >
+            <img
+              src={c.posterSrc}
+              alt={language === 'ru' ? c.titleRu : c.titleEn}
+              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-graphite/90 via-graphite/20 to-transparent" />
+            <div className="absolute bottom-0 left-0 p-6 md:p-8">
+              <p className="font-inter text-xs tracking-[0.3em] text-silver mb-2">
+                {c.index}
+              </p>
+              <h3 className="font-unbounded font-bold text-xl md:text-2xl text-muted-white leading-tight">
+                {language === 'ru' ? c.titleRu : c.titleEn}
+              </h3>
+            </div>
+          </Link>
+        ))}
+      </div>
     </section>
   )
 }
