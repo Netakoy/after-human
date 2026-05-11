@@ -1,3 +1,6 @@
+// NOTE: In Tailwind v4, this file is NOT read by the Tailwind PostCSS plugin.
+// The actual theme configuration lives in src/app/globals.css (@theme inline block).
+// This file is kept for reference and IDE tooling only.
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
