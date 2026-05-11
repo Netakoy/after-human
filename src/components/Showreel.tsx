@@ -5,7 +5,7 @@ import { useLanguage } from '@/lib/language'
 import KinescopePlayer from './KinescopePlayer'
 import { initGSAP, gsap } from '@/lib/gsap-init'
 
-const SHOWREEL_KINESCOPE_ID = 'PLACEHOLDER_SHOWREEL_ID'
+const SHOWREEL_KINESCOPE_ID = 'fkc8suZVyuuA8t7isYNdVB'
 
 export default function Showreel() {
   const { t } = useLanguage()
