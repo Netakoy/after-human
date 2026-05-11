@@ -14,10 +14,12 @@ export default function Hero() {
   useEffect(() => {
     initGSAP()
 
+    if (!titleRef.current) return
+
     const tl = gsap.timeline({ delay: 0.2 })
     tl.fromTo(badgeRef.current, { y: 12, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out' })
       .fromTo(
-        titleRef.current!.querySelectorAll('span'),
+        titleRef.current.querySelectorAll('span'),
         { y: 8, opacity: 0, filter: 'blur(14px)' },
         { y: 0, opacity: 1, filter: 'blur(0px)', duration: 0.75, ease: 'power2.out', stagger: 0.07 },
         '-=0.4'
@@ -25,12 +27,16 @@ export default function Hero() {
       .fromTo(contentRef.current, { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out' }, '-=0.5')
       .fromTo(imageRef.current, { opacity: 0, scale: 1.04 }, { opacity: 1, scale: 1, duration: 1.4, ease: 'power2.out' }, 0.3)
 
-    gsap.to(imageRef.current, {
+    const parallax = gsap.to(imageRef.current, {
       y: -60, ease: 'none',
       scrollTrigger: { trigger: imageRef.current, start: 'top top', end: 'bottom top', scrub: true },
     })
 
-    return () => { tl.kill() }
+    return () => {
+      tl.kill()
+      parallax.scrollTrigger?.kill()
+      parallax.kill()
+    }
   }, [])
 
   const openModal = () => window.dispatchEvent(new CustomEvent('openContactModal'))
