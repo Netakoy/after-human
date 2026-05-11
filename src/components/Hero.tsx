@@ -86,7 +86,7 @@ export default function Hero() {
         style={{ opacity: 0 }}
       >
         <img
-          src="/images/hero.jpg"
+          src="/images/cases/oxyterra.png"
           alt="After Human"
           className="w-full h-full object-cover"
         />

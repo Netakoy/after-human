@@ -38,7 +38,7 @@ export default function Showreel() {
     <section ref={sectionRef} className="relative h-screen bg-graphite" style={{ opacity: 0 }}>
       <KinescopePlayer
         videoId={SHOWREEL_KINESCOPE_ID}
-        poster="/images/showreel-poster.jpg"
+        poster="/images/cases/showreel-poster.png"
         showPlayButton={true}
         playLabel={t.showreel.label}
         className="w-full h-full"
