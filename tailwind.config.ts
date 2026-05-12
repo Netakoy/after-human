@@ -8,7 +8,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'graphite': '#0a0a0a',
+        'graphite': '#000000',
         'surface': '#141414',
         'silver': '#6b6b6b',
         'muted-white': '#f0f0f0',

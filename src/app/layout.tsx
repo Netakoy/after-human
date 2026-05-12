@@ -1,18 +1,16 @@
 import type { Metadata } from 'next'
-import { Unbounded, Inter } from 'next/font/google'
+import { Unbounded } from 'next/font/google'
 import { LanguageProvider } from '@/lib/language'
+import SoundProvider from '@/components/SoundProvider'
+import NoiseOverlay from '@/components/NoiseOverlay'
+import GradientBackground from '@/components/GradientBackground'
+import TelegramPopup from '@/components/TelegramPopup'
 import './globals.css'
 
 const unbounded = Unbounded({
   subsets: ['latin', 'cyrillic'],
   variable: '--font-unbounded',
   weight: ['300', '400', '700'],
-})
-
-const inter = Inter({
-  subsets: ['latin', 'cyrillic'],
-  variable: '--font-inter',
-  weight: ['300', '400', '500'],
 })
 
 export const metadata: Metadata = {
@@ -34,9 +32,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ru" className={`${unbounded.variable} ${inter.variable}`}>
+    <html lang="ru" className={unbounded.variable}>
       <body>
         <LanguageProvider>
+          <SoundProvider />
+          <GradientBackground />
+          <NoiseOverlay />
+          <TelegramPopup />
           {children}
         </LanguageProvider>
       </body>

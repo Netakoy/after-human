@@ -1,8 +1,9 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useLanguage } from '@/lib/language'
 import { initGSAP, gsap } from '@/lib/gsap-init'
+import KinescopePlayer from '@/components/KinescopePlayer'
 
 export default function Hero() {
   const { t } = useLanguage()
@@ -10,6 +11,7 @@ export default function Hero() {
   const titleRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
   const imageRef = useRef<HTMLDivElement>(null)
+  const [videoReady, setVideoReady] = useState(false)
 
   useEffect(() => {
     initGSAP()
@@ -55,7 +57,7 @@ export default function Hero() {
 
         <div ref={titleRef}>
           <h1 className="font-unbounded font-bold leading-[0.88] tracking-tight text-muted-white"
-            style={{ fontSize: 'clamp(3rem, 10vw, 8rem)' }}>
+            style={{ fontSize: 'clamp(3rem, 10vw, 8rem)', whiteSpace: 'nowrap' }}>
             {'AFTER'.split('').map((ch, i) => (
               <span key={i} style={{ opacity: 0, display: 'inline-block' }}>{ch}</span>
             ))}
@@ -104,18 +106,41 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Right half — visual */}
+      {/* Full-screen background video */}
       <div
         ref={imageRef}
-        className="absolute right-0 top-0 w-full md:w-1/2 h-full"
+        className="absolute inset-0"
         style={{ opacity: 0 }}
       >
+        {/* Постер пока видео грузится */}
         <img
           src="/images/cases/oxyterra.png"
-          alt="After Human"
-          className="w-full h-full object-cover"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ opacity: videoReady ? 0 : 1, transition: 'opacity 0.8s ease' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-graphite via-graphite/70 to-transparent" />
+        {/* Видео на весь фон */}
+        <KinescopePlayer
+          videoId="gqsQsTUNV6KKiByk6C7yQY"
+          autoplay
+          muted
+          loop
+          showControls={false}
+          onReady={() => setVideoReady(true)}
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            opacity: videoReady ? 1 : 0,
+            transition: 'opacity 0.8s ease',
+          }}
+        />
+        {/* Градиент: слева чёрный (100%), справа прозрачный (0%) */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: 'linear-gradient(to right, #000 0%, #000 35%, rgba(0,0,0,0.5) 60%, transparent 100%)' }}
+        />
       </div>
     </section>
   )

@@ -1,49 +1,79 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-graphite: #0a0a0a;
+  --color-graphite: #000000;
   --color-surface: #141414;
   --color-silver: #6b6b6b;
   --color-muted-white: #f0f0f0;
   --color-cyan-accent: #00d4ff;
   --font-unbounded: 'Unbounded', sans-serif;
-  --font-inter: 'Inter', sans-serif;
+  --font-inter: 'Unbounded', sans-serif;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    background-color: #000000;
+    color: #f0f0f0;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-unbounded), sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  main {
+    position: relative;
+    z-index: 1;
+  }
+
+  ::selection {
+    background-color: #00d4ff;
+    color: #0a0a0a;
+  }
+
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #6b6b6b;
+  }
 }
 
-html {
-  background-color: #0a0a0a;
-  color: #f0f0f0;
-  scroll-behavior: smooth;
+.page-pad {
+  padding-left: max(1.5rem, 8vw);
+  padding-right: max(1.5rem, 8vw);
 }
 
-body {
-  font-family: var(--font-inter), sans-serif;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@keyframes blob-drift-1 {
+  0%, 100% { transform: translate(0, 0); }
+  35%       { transform: translate(25vw, 15vh); }
+  65%       { transform: translate(10vw, -10vh); }
 }
 
-::selection {
-  background-color: #00d4ff;
-  color: #0a0a0a;
+@keyframes blob-drift-2 {
+  0%, 100% { transform: translate(0, 0); }
+  40%       { transform: translate(-20vw, -20vh); }
+  70%       { transform: translate(-8vw, 12vh); }
 }
 
-::-webkit-scrollbar {
-  width: 3px;
-}
-
-::-webkit-scrollbar-track {
-  background: #0a0a0a;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #6b6b6b;
+@keyframes blob-drift-3 {
+  0%, 100% { transform: translate(0, 0); }
+  30%       { transform: translate(-18vw, 18vh); }
+  60%       { transform: translate(15vw, -8vh); }
 }

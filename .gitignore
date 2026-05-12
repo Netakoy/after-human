@@ -42,3 +42,10 @@ next-env.d.ts
 
 # git worktrees
 .worktrees/
+
+# dev tooling
+.superpowers/
+docs/superpowers/
+
+# audio duplicates in root
+/*.aac

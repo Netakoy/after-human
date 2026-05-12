@@ -24,12 +24,23 @@ export interface Messages {
   nav: {
     work: string
     process: string
-    studio: string
+    pricing: string
     contact: string
   }
   hero: {
     tagline: string
     scroll: string
+    badge: string
+    description: string
+    stats: {
+      value: string
+      unit: string
+      label: string
+    }[]
+    cta: {
+      showreel: string
+      contact: string
+    }
   }
   showreel: {
     label: string
@@ -45,18 +56,32 @@ export interface Messages {
       description: string
     }[]
   }
-  studio: {
-    title: string
-    text: string
-  }
   contact: {
     title: string
     name: string
     company: string
+    phone: string
     messenger: string
     task: string
     submit: string
     success: string
     error: string
+  }
+  pricing: {
+    title: string
+    subtitle: string
+    slider: { label: string; unit: string }
+    options: {
+      script: string
+      character: string
+      extraCharacters: string
+      soundDesign: string
+      musicAi: string
+      musicLicensed: string
+      editing: string
+      colorGrading: string
+    }
+    total: string
+    cta: string
   }
 }

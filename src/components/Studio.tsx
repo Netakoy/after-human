@@ -1,11 +1,9 @@
 'use client'
 
 import { useRef, useEffect } from 'react'
-import { useLanguage } from '@/lib/language'
 import { initGSAP, gsap } from '@/lib/gsap-init'
 
 export default function Studio() {
-  const { t } = useLanguage()
   const sectionRef = useRef<HTMLElement>(null)
   const textRef = useRef<HTMLDivElement>(null)
 
@@ -44,14 +42,13 @@ export default function Studio() {
         className="max-w-3xl"
         style={{ opacity: 0 }}
       >
-        <p className="font-inter text-xs tracking-[0.3em] text-silver mb-12">
+        <p className="font-unbounded text-xs tracking-[0.3em] text-silver mb-12">
           STUDIO
         </p>
         <h2 className="font-unbounded font-bold text-4xl md:text-7xl text-muted-white leading-tight mb-10">
-          {t.studio.title}
+          AFTER HUMAN
         </h2>
-        <p className="font-inter text-base md:text-lg text-silver leading-relaxed max-w-xl">
-          {t.studio.text}
+        <p className="font-unbounded text-base md:text-lg text-silver leading-relaxed max-w-xl">
         </p>
       </div>
     </section>

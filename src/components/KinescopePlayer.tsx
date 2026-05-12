@@ -10,7 +10,10 @@ interface KinescopePlayerProps {
   loop?: boolean
   className?: string
   showPlayButton?: boolean
+  showControls?: boolean
   playLabel?: string
+  onReady?: () => void
+  style?: React.CSSProperties
 }
 
 export default function KinescopePlayer({
@@ -21,15 +24,19 @@ export default function KinescopePlayer({
   loop = false,
   className = '',
   showPlayButton = false,
+  showControls = true,
   playLabel = 'PLAY',
+  onReady,
+  style,
 }: KinescopePlayerProps) {
   const [playing, setPlaying] = useState(autoplay)
+  const [clickedPlay, setClickedPlay] = useState(false)
 
   const params = new URLSearchParams({
-    ...(autoplay ? { autoplay: '1' } : {}),
+    ...((autoplay || clickedPlay) ? { autoplay: '1' } : {}),
     ...(muted ? { muted: '1' } : {}),
     ...(loop ? { loop: '1' } : {}),
-    controls: '1',
+    controls: showControls ? '1' : '0',
     ui_lang: 'ru',
   })
 
@@ -39,7 +46,7 @@ export default function KinescopePlayer({
     return (
       <div
         className={`relative cursor-pointer group ${className}`}
-        onClick={() => setPlaying(true)}
+        onClick={() => { setClickedPlay(true); setPlaying(true) }}
       >
         {poster && (
           <img
@@ -48,9 +55,13 @@ export default function KinescopePlayer({
             className="w-full h-full object-cover"
           />
         )}
+        <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <button className="flex items-center gap-4 text-white font-unbounded text-sm tracking-[0.3em] transition-opacity group-hover:opacity-70">
-            <span className="w-16 h-16 rounded-full border border-white/40 flex items-center justify-center">
+          <button
+            className="flex items-center gap-4 text-white font-unbounded text-sm tracking-[0.3em] transition-opacity group-hover:opacity-70"
+            style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}
+          >
+            <span className="w-16 h-16 rounded-full border border-white/70 bg-black/50 flex items-center justify-center" style={{ boxShadow: '0 4px 16px rgba(0,0,0,0.6)' }}>
               ▶
             </span>
             {playLabel}
@@ -66,7 +77,8 @@ export default function KinescopePlayer({
       className={className}
       allow="autoplay; fullscreen; picture-in-picture"
       allowFullScreen
-      style={{ border: 'none' }}
+      onLoad={onReady}
+      style={{ border: 'none', display: 'block', ...style }}
     />
   )
 }
