@@ -35,7 +35,10 @@ export default function SoundProvider() {
     loadBuffer('/click.aac')
 
     const onDown = (e: PointerEvent) => {
-      if (e.pointerType === 'touch') return
+      if (e.pointerType === 'touch') {
+        const el = e.target as Element
+        if (!el.closest('button, a, input, select, [role="button"]')) return
+      }
       play('/click.aac')
     }
     document.addEventListener('pointerdown', onDown)
