@@ -3,17 +3,22 @@
 import { useEffect, useState } from 'react'
 
 export default function ScrollIndicator() {
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => {
-      const nearBottom =
-        window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 80
-      setVisible(!nearBottom)
+    const check = () => {
+      const scrollable = document.documentElement.scrollHeight > window.innerHeight + 80
+      const nearBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 80
+      setVisible(scrollable && !nearBottom)
     }
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
+
+    // Delay first check so the full DOM is rendered
+    const t = setTimeout(check, 300)
+    window.addEventListener('scroll', check, { passive: true })
+    return () => {
+      clearTimeout(t)
+      window.removeEventListener('scroll', check)
+    }
   }, [])
 
   return (
