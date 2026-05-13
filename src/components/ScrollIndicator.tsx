@@ -6,7 +6,12 @@ export default function ScrollIndicator() {
   const [visible, setVisible] = useState(true)
 
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY < 300)
+    const onScroll = () => {
+      const nearBottom =
+        window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 80
+      setVisible(!nearBottom)
+    }
+    onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
