@@ -34,7 +34,10 @@ export default function SoundProvider() {
     ctx ??= new AudioContext()
     loadBuffer('/click.aac')
 
-    const onDown = () => { play('/click.aac') }
+    const onDown = (e: PointerEvent) => {
+      if (e.pointerType === 'touch') return
+      play('/click.aac')
+    }
     document.addEventListener('pointerdown', onDown)
 
     // Для внутренних ссылок (<Link>) задерживаем навигацию на 150ms

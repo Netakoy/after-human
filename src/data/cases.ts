@@ -23,15 +23,13 @@ export const casesData: CaseData[] = [
   {
     id: 'oxyterra',
     index: '001',
-    titleRu: 'OXYTERRA',
-    titleEn: 'OXYTERRA',
+    titleRu: 'БРЕНД-ВИДЕО OXYTERRA',
+    titleEn: 'OXYTERRA BRAND FILM',
     descriptionRu: [
-      'Oxyterra — первый проект, где нам нужно было совместить кино и техническую точность. В первой части мы рассказывали историю про кислород и жизнь через визуальные образы и атмосферу.',
-      'Во второй — уже буквально разбирали устройство по деталям: потоки воздуха, интерфейсы, графики, внутреннюю механику. Здесь было много переосмыслений в процессе — иногда мы переделывали сцены почти с нуля, потому что понимали: можно сделать сильнее. И именно такие проекты нам нравятся больше всего.',
+      'Клиент — OXYTERRA, производитель кислородного оборудования для медицинских и восстановительных процедур. До нас уже была попытка с другой командой — результат не устроил. Мы посмотрели предыдущую версию, поняли проблемы и предложили своё видение: два ролика — эмоциональный бренд-фильм про идею кислорода и жизни, и технический ролик с объяснением аппарата и интерфейса. Ключевой момент в работе: мы согласовывали с клиентом каждую сцену до запуска производства — это сократило правки и сделало процесс предсказуемым. Иногда полностью пересобирали графические сцены, потому что понимали: можно сделать сильнее. Именно такие проекты нам нравятся больше всего.',
     ],
     descriptionEn: [
-      'Oxyterra was the first project where we had to merge cinematic storytelling with technical precision. In the first part, we told the story of oxygen and life through visual imagery and atmosphere.',
-      'In the second, we literally broke the device down to its components: airflows, interfaces, charts, inner mechanics. There was a lot of rethinking along the way — sometimes we rebuilt scenes almost from scratch because we knew we could do better. These are exactly the kinds of projects we love most.',
+      'The client is OXYTERRA, a manufacturer of oxygen equipment for medical and wellness procedures. A previous team had already attempted the project — the client wasn\'t satisfied with the result. We reviewed the earlier version, identified the issues, and proposed our own vision: two videos — an emotional brand film about the idea of oxygen and life, and a technical video explaining the device and its interface. Key to our process: we aligned with the client on every scene before production began, which reduced revisions and kept the workflow predictable. Some graphic scenes were rebuilt from scratch — because we knew we could do better. These are exactly the kinds of projects we love most.',
     ],
     videos: ['iQrV4TBCLccUmq1HiDSGYG', 'eWhqsSyY7oNSKQmsSJntms'],
     videoPosters: ['/images/cases/oxyterra.png', '/images/cases/oxyterra/5.png'],
@@ -94,14 +92,13 @@ export const casesData: CaseData[] = [
   {
     id: 'ai-doc',
     index: '002',
-    titleRu: 'ДОКУМЕНТАЛЬНАЯ КОРОТКОМЕТРАЖКА',
+    titleRu: 'ДОКУМЕНТАЛЬНЫЙ ФИЛЬМ',
     titleEn: 'AI SHORT DOCUMENTARY',
     descriptionRu: [
-      'Наш первый большой проект начался с простой мысли: люди до сих пор не понимают, насколько далеко зашёл AI.',
-      'Мы сделали документальный ролик про AI‑моделей — с сюжетом, закадровым голосом и атмосферой почти как у Netflix‑доков. Больше всего времени ушло не на картинки, а на эмоцию: живой голос, правильная мимика, естественные губы, звук улиц, музыка, детали. Именно после этого проекта появился After Human.',
+      'Это был наш первый собственный AI-проект — без клиента и бюджета, только с идеей: сделать документальный фильм настолько хорошим, чтобы стало понятно — AI уже работает как полноценный инструмент кино. Концепция, сценарий, персонажи, озвучка, монтаж — всё с нуля. Изначально планировался ролик на минуту, но история выросла до полноценного фильма на 2,5 минуты. Больше всего времени ушло не на картинки, а на эмоцию: правильная мимика, живой голос, синхрон губ, звук улиц, музыка, детали. Именно после этого проекта появился After Human.',
     ],
     descriptionEn: [
-      'Our first major project started with a simple idea: people still don\'t understand how far AI has come.',
+      'This was our first in-house AI project — no client, no budget, just the idea: make a documentary good enough to prove that AI already works as a real filmmaking tool. Concept, script, characters, voiceover, editing — all from scratch. We originally planned a one-minute piece, but the story grew into a full 2.5-minute film. Most of the time went not into visuals, but into emotion: accurate facial expressions, natural voice, lip sync, street sounds, music, details. After Human was born from this project.',
       'We made a documentary about AI models — with a narrative, voiceover, and an atmosphere almost like a Netflix doc. Most of the time wasn\'t spent on visuals, but on emotion: a natural voice, correct facial expressions, realistic lip sync, street sounds, music, details. After Human was born from this project.',
     ],
     videos: ['woSrEnNNVNBtD4gSbskW1q'],
@@ -163,12 +160,10 @@ export const casesData: CaseData[] = [
     titleRu: 'МУЗЫКАЛЬНЫЙ КЛИП',
     titleEn: 'MUSIC VIDEO',
     descriptionRu: [
-      'Этот клип стал для нас проверкой на внимание к деталям. Один главный герой, несколько персонажей, один и тот же автомобиль в десятках сцен, спецэффекты, ночные съёмки, движение камеры — и всё это полностью создано с помощью AI.',
-      'Самое сложное здесь было не «сгенерировать красиво», а удержать целостность мира: чтобы герой оставался собой в каждом кадре, а история не разваливалась на набор эффектных сцен. В итоге получился не эксперимент, а полноценный музыкальный клип с характером.',
+      'Первый коммерческий проект: клип для артиста, который строит AI-музыкальный проект в жанре Afrobeat — с вымышленным цифровым персонажем и полноценным альбомом на нейросетях. Клиент пришёл с готовым треком и образом героя; мы создали персонажа, подобрали стиль, автомобиль и ещё двух героев для клипа. Главная задача — сделать не «красивый AI-эксперимент», а полноценный клип, который зритель воспринимает как настоящую съёмку. Один герой, несколько персонажей, один и тот же автомобиль в десятках сцен, спецэффекты, ночные съёмки — и всё это полностью через AI. Клип пока не вышел: идёт подготовка к полноценному запуску артиста.',
     ],
     descriptionEn: [
-      'This video became our test for attention to detail. One main character, several supporting roles, the same car across dozens of scenes, special effects, night shoots, camera motion — all of it created entirely with AI.',
-      'The hardest part wasn\'t "generating something beautiful," but maintaining world consistency: keeping the character recognizable in every frame, and the story from falling apart into a collection of impressive but disconnected shots. The result wasn\'t an experiment — it was a full-fledged music video with a personality.',
+      'Our first commercial project: a music video for an artist building an AI music project in Afrobeat — with a fictional digital character and a full album made with neural networks. The client came with a finished track and a vision for the main character; we built the character, chose his style, the car, and two additional cast members. The main goal was not to make a "cool AI experiment" but a real music video that viewers would take as an actual shoot. One hero, several characters, the same car across dozens of scenes, night sequences, special effects — all through AI. The video hasn\'t dropped yet: the artist\'s full launch is in preparation.',
     ],
     videos: ['eUfwrUseNsesFui2zqBBUg'],
     posterSrc: '/images/cases/african-clip.png',
@@ -228,15 +223,13 @@ export const casesData: CaseData[] = [
   {
     id: 'bali',
     index: '004',
-    titleRu: 'ДЖИН НА БАЛИ',
-    titleEn: 'GIN IN BALI',
+    titleRu: 'РЕКЛАМА БАЛИ',
+    titleEn: 'BALI SHORT FILM',
     descriptionRu: [
-      'Мы взяли знакомую историю про Джинна и перевернули её. Вместо волшебства — обычная квартира, пицца, телевизор и мечта сбежать на Бали.',
-      'Получилась тёплая короткометражка про человека, который устал жить «не свою» жизнь. Без попытки что-то продать или удивить технологиями. Просто кино, которое хочется досмотреть до конца. Наверное, это один из тех проектов, где мы по-настоящему кайфовали от каждой сцены.',
+      'Второй собственный проект — проверка: можем ли мы рассказать полноценную историю без закадрового голоса, только через визуал, звук и монтаж? Мы взяли знакомую историю про Джинна и перевернули её. Вместо волшебства — обычная квартира, пицца, телевизор и мечта сбежать на Бали. Сложнее всего было сохранить персонажа узнаваемым и при этом показать трансформацию: в обычной жизни герой выглядит проще и грубее, а в своих фантазиях — другим человеком. Получилось тёплое кино, которое хочется досмотреть до конца. Один из тех проектов, где мы по-настоящему кайфовали от каждой сцены.',
     ],
     descriptionEn: [
-      'We took a familiar genie story and flipped it. No magic — just a regular apartment, pizza, TV, and a dream to escape to Bali.',
-      'What came out was a warm short film about a person tired of living someone else\'s life. No attempt to sell anything or show off technology. Just a film you actually want to watch to the end. Probably one of those projects where we genuinely loved every single scene.',
+      'Our second in-house project — a test: can we tell a complete story without a voiceover, using only visuals, sound, and editing? We took a familiar genie story and flipped it. No magic — just a regular apartment, pizza, TV, and a dream to escape to Bali. The hardest part was keeping the character recognizable while showing his transformation: in everyday life he looks rougher and more ordinary, but in his fantasies he sees himself as a different person. What came out was a warm short film you actually want to watch to the end — one of those projects where we genuinely loved every single scene.',
     ],
     videos: ['2iF9V3k7QYZcuPixbJ5UGE'],
     posterSrc: '/images/cases/Bali.png',

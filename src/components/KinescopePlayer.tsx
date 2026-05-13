@@ -52,16 +52,17 @@ export default function KinescopePlayer({
           <img
             src={poster}
             alt=""
+            loading="eager"
             className="w-full h-full object-cover"
           />
         )}
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex items-center justify-center">
           <button
-            className="flex items-center gap-4 text-white font-unbounded text-sm tracking-[0.3em] transition-opacity group-hover:opacity-70"
+            className="flex flex-col md:flex-row items-center gap-3 md:gap-4 text-white font-unbounded text-xs md:text-sm tracking-[0.3em] transition-opacity group-hover:opacity-70 active:opacity-70"
             style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}
           >
-            <span className="w-16 h-16 rounded-full border border-white/70 bg-black/50 flex items-center justify-center" style={{ boxShadow: '0 4px 16px rgba(0,0,0,0.6)' }}>
+            <span className="w-14 h-14 md:w-16 md:h-16 rounded-full border border-white/70 bg-black/50 flex items-center justify-center" style={{ boxShadow: '0 4px 16px rgba(0,0,0,0.6)' }}>
               ▶
             </span>
             {playLabel}

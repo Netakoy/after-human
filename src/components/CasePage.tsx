@@ -127,6 +127,7 @@ export default function CasePage({ caseData }: CasePageProps) {
                 <img
                   src={src}
                   alt=""
+                  loading="eager"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
@@ -235,7 +236,7 @@ export default function CasePage({ caseData }: CasePageProps) {
                 <img
                   src={c.posterSrc}
                   alt=""
-                  className="w-full h-full object-cover grayscale transition-[transform,filter] duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
+                  className="w-full h-full object-cover md:grayscale transition-[transform,filter] duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-5">

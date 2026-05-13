@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Unbounded } from 'next/font/google'
 import { LanguageProvider } from '@/lib/language'
 import SoundProvider from '@/components/SoundProvider'
+import ScrollIndicator from '@/components/ScrollIndicator'
 import NoiseOverlay from '@/components/NoiseOverlay'
 import GradientBackground from '@/components/GradientBackground'
 import TelegramPopup from '@/components/TelegramPopup'
@@ -36,6 +37,7 @@ export default function RootLayout({
       <body>
         <LanguageProvider>
           <SoundProvider />
+          <ScrollIndicator />
           <GradientBackground />
           <NoiseOverlay />
           <TelegramPopup />

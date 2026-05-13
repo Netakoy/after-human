@@ -112,13 +112,6 @@ export default function Hero() {
         className="absolute inset-0"
         style={{ opacity: 0 }}
       >
-        {/* Постер пока видео грузится */}
-        <img
-          src="/images/cases/oxyterra.png"
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ opacity: videoReady ? 0 : 1, transition: 'opacity 0.8s ease' }}
-        />
         {/* Видео на весь фон */}
         <KinescopePlayer
           videoId="gqsQsTUNV6KKiByk6C7yQY"

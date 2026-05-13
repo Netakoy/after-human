@@ -23,7 +23,7 @@ export default function Cases() {
             <img
               src={c.posterSrc}
               alt={language === 'ru' ? c.titleRu : c.titleEn}
-              className="w-full h-full object-cover grayscale transition-[transform,filter] duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
+              className="w-full h-full object-cover md:grayscale transition-[transform,filter] duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-graphite/90 via-graphite/20 to-transparent" />
             <div className="absolute bottom-0 left-0 p-6 md:p-8">
