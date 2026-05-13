@@ -9,7 +9,8 @@ export default function ScrollIndicator() {
     const check = () => {
       const scrollable = document.documentElement.scrollHeight > window.innerHeight + 80
       const nearBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 80
-      setVisible(scrollable && !nearBottom)
+      const pastHero = window.scrollY > 80
+      setVisible(scrollable && !nearBottom && pastHero)
     }
 
     // Delay first check so the full DOM is rendered

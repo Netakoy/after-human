@@ -87,7 +87,7 @@ export default function CasePage({ caseData }: CasePageProps) {
         <p className="animate-in font-unbounded text-xs tracking-[0.3em] text-silver mb-5" style={{ opacity: 0 }}>
           {caseData.index}
         </p>
-        <h1 className="animate-in font-unbounded font-bold text-5xl md:text-7xl text-muted-white leading-[1.05] max-w-4xl mb-10" style={{ opacity: 0 }}>
+        <h1 className="animate-in font-unbounded font-bold text-3xl md:text-5xl lg:text-7xl text-muted-white leading-[1.1] max-w-4xl mb-10" style={{ opacity: 0 }}>
           {title}
         </h1>
         {paragraphs.map((para, i) => (
@@ -240,7 +240,7 @@ export default function CasePage({ caseData }: CasePageProps) {
                   alt=""
                   fill
                   sizes="320px"
-                  className="object-cover md:grayscale transition-[transform,filter] duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-5">

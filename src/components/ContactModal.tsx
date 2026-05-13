@@ -63,15 +63,17 @@ export default function ContactModal() {
   if (!open) return null
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
+    <div className="fixed inset-0 z-[100] overflow-y-auto">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-graphite/90 backdrop-blur-sm"
+        className="fixed inset-0 bg-graphite/90 backdrop-blur-sm"
         onClick={close}
       />
 
+      {/* Centering wrapper */}
+      <div className="relative flex justify-center items-start md:items-center min-h-full p-4 md:p-8 py-8">
       {/* Modal */}
-      <div className="relative w-full max-w-xl bg-surface border border-white/10 px-8 md:px-12 py-10 md:py-14">
+      <div className="relative w-full max-w-xl bg-surface border border-white/10 px-6 md:px-12 pt-14 pb-10 md:pb-14">
         {/* Close */}
         <button
           onClick={close}
@@ -146,6 +148,7 @@ export default function ContactModal() {
             </button>
           </form>
         )}
+      </div>
       </div>
     </div>
   )
