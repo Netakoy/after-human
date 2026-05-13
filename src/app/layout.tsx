@@ -34,6 +34,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru" className={unbounded.variable}>
+      <head>
+        <link rel="preconnect" href="https://kinescope.io" />
+        <link rel="dns-prefetch" href="https://kinescope.io" />
+      </head>
       <body>
         <LanguageProvider>
           <SoundProvider />

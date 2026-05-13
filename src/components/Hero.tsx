@@ -112,6 +112,15 @@ export default function Hero() {
         className="absolute inset-0"
         style={{ opacity: 0 }}
       >
+        {/* Постер — показывается сразу, скрывается когда видео готово */}
+        <img
+          src="/images/hero-poster.jpg"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ opacity: videoReady ? 0 : 1, transition: 'opacity 1.2s ease' }}
+        />
+
         {/* Видео на весь фон */}
         <KinescopePlayer
           videoId="gqsQsTUNV6KKiByk6C7yQY"
@@ -126,7 +135,7 @@ export default function Hero() {
             width: '100%',
             height: '100%',
             opacity: videoReady ? 1 : 0,
-            transition: 'opacity 0.8s ease',
+            transition: 'opacity 1.2s ease',
           }}
         />
         {/* Градиент: слева чёрный (100%), справа прозрачный (0%) */}
