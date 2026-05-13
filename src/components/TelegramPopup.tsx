@@ -1,12 +1,24 @@
 'use client'
 
+import { useEffect, useState } from 'react'
+
 export default function TelegramPopup() {
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setVisible(window.scrollY > window.innerHeight * 0.8)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
   return (
     <a
       href="https://t.me/stas_event"
       target="_blank"
       rel="noopener noreferrer"
-      className="hidden md:flex fixed bottom-6 right-6 z-50 items-center gap-3 bg-[#0d0d0d] border border-white/10 px-4 py-3 hover:border-white/30 transition-all duration-200 group"
+      className="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-[#0d0d0d] border border-white/10 px-4 py-3 hover:border-white/30 transition-all duration-300 group"
+      style={{ opacity: visible ? 1 : 0, pointerEvents: visible ? 'auto' : 'none' }}
     >
       <svg
         width="16"
