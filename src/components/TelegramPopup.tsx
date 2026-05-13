@@ -6,7 +6,7 @@ export default function TelegramPopup() {
       href="https://t.me/stas_event"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-[#0d0d0d] border border-white/10 px-4 py-3 hover:border-white/30 transition-all duration-200 group"
+      className="hidden md:flex fixed bottom-6 right-6 z-50 items-center gap-3 bg-[#0d0d0d] border border-white/10 px-4 py-3 hover:border-white/30 transition-all duration-200 group"
     >
       <svg
         width="16"

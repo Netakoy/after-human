@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useLanguage } from '@/lib/language'
 import { casesData } from '@/data/cases'
 
@@ -20,10 +21,12 @@ export default function Cases() {
             href={`/cases/${c.id}`}
             className="group relative aspect-video overflow-hidden block"
           >
-            <img
+            <Image
               src={c.posterSrc}
               alt={language === 'ru' ? c.titleRu : c.titleEn}
-              className="w-full h-full object-cover md:grayscale transition-[transform,filter] duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover md:grayscale transition-[transform,filter] duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-graphite/90 via-graphite/20 to-transparent" />
             <div className="absolute bottom-0 left-0 p-6 md:p-8">

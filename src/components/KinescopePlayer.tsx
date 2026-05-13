@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 
 interface KinescopePlayerProps {
   videoId: string
@@ -49,11 +50,13 @@ export default function KinescopePlayer({
         onClick={() => { setClickedPlay(true); setPlaying(true) }}
       >
         {poster && (
-          <img
+          <Image
             src={poster}
             alt=""
-            loading="eager"
-            className="w-full h-full object-cover"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
           />
         )}
         <div className="absolute inset-0 bg-black/40" />

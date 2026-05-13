@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useLanguage } from '@/lib/language'
 import { initGSAP, gsap } from '@/lib/gsap-init'
 import KinescopePlayer from './KinescopePlayer'
@@ -124,11 +125,12 @@ export default function CasePage({ caseData }: CasePageProps) {
                 className="aspect-video overflow-hidden cursor-zoom-in relative group"
                 onClick={() => setLightbox(i)}
               >
-                <img
+                <Image
                   src={src}
                   alt=""
-                  loading="eager"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
               </div>
@@ -233,10 +235,12 @@ export default function CasePage({ caseData }: CasePageProps) {
                 className={`group relative flex-shrink-0 overflow-hidden block cursor-pointer transition-opacity duration-300 ${isCurrent ? 'opacity-40 pointer-events-none' : 'hover:opacity-90'}`}
                 style={{ width: '320px', aspectRatio: '16/10' }}
               >
-                <img
+                <Image
                   src={c.posterSrc}
                   alt=""
-                  className="w-full h-full object-cover md:grayscale transition-[transform,filter] duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
+                  fill
+                  sizes="320px"
+                  className="object-cover md:grayscale transition-[transform,filter] duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-5">
