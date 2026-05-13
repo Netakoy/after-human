@@ -26,7 +26,7 @@ export default function Cases() {
               alt={language === 'ru' ? c.titleRu : c.titleEn}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover md:grayscale transition-[transform,filter] duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
+              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-graphite/90 via-graphite/20 to-transparent" />
             <div className="absolute bottom-0 left-0 p-6 md:p-8">
