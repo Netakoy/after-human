@@ -17,6 +17,7 @@ export interface CaseData {
   posterSrc: string
   gallery: string[]
   pipeline: PipelineSection[]
+  fullWidth?: boolean
 }
 
 export const casesData: CaseData[] = [
@@ -296,6 +297,73 @@ export const casesData: CaseData[] = [
         itemsEn: [
           'Final Cut Pro — editing, mixing',
           'Ableton Live — mastering, sound processing',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'dom',
+    index: '005',
+    titleRu: 'РЕСТОРАН DOM',
+    titleEn: 'RESTAURANT DOM',
+    fullWidth: true,
+    descriptionRu: [
+      'Клиент — ресторан DOM (DEUS OPTIMUS MAXIMUS) на Бали. Новое заведение с итальянской кухней, европейским уровнем сервиса и командой, которая вложила в открытие по-настоящему много. Главная задача бренд-видео — донести не атмосферу, а убеждённость: здесь настоящая итальянская кухня, а не её интерпретация.',
+      'Нашим решением стал бокал. Зритель погружается внутрь — и оказывается в истории древнего Рима: его величие, натуральность, характер. Так мы рассказали про итальянскую кухню через образ, а не через слова. Финальная сцена — девушка с бокалом, вечер, расслабленность. Всё, что нужно сказать — уже сказано.',
+      'Сам ресторан снимался с реальных фотографий: важно было точно передать интерьер и масштаб. Никакой самодеятельности — только то, что есть на самом деле.',
+    ],
+    descriptionEn: [
+      'The client is DOM (DEUS OPTIMUS MAXIMUS), a new restaurant on Bali. Italian cuisine, European-level service, and a team that put a great deal into the opening. The brand film had one job: convince the viewer that this is real Italian food — not an interpretation of it.',
+      'Our solution was a glass of wine. The viewer steps inside it — and lands in the history of ancient Rome: its grandeur, natural ingredients, character. That\'s how we told the story of Italian cuisine through imagery, not words. The final scene: a woman with a glass, an evening, ease. Everything that needed to be said was already said.',
+      'The restaurant itself was built from real photographs — it was crucial to capture the interior accurately and convey its scale. No invention — only what\'s actually there.',
+    ],
+    videos: ['7CacC84J2i6CeRpVJpkn32'],
+    posterSrc: '/images/cases/dom.jpeg',
+    gallery: [
+      '/images/cases/dom/1.jpeg',
+      '/images/cases/dom/2.jpeg',
+      '/images/cases/dom/3.jpeg',
+      '/images/cases/dom/4.jpeg',
+    ],
+    pipeline: [
+      {
+        category: 'ВИДЕО И ВИЗУАЛИЗАЦИЯ',
+        categoryEn: 'VIDEO & VISUALIZATION',
+        items: [
+          'ChatGPT, DeepSeek — концепция, промты',
+          'Midjourney — референсы и раскадровка',
+          'Runway ML, Kling — кинематографические сцены',
+          'Topaz — апскейл до 4K',
+        ],
+        itemsEn: [
+          'ChatGPT, DeepSeek — concept, prompts',
+          'Midjourney — references and storyboard',
+          'Runway ML, Kling — cinematic scenes',
+          'Topaz — upscale to 4K',
+        ],
+      },
+      {
+        category: 'САУНД ДИЗАЙН',
+        categoryEn: 'SOUND DESIGN',
+        items: [
+          'ElevenLabs — закадровый голос',
+          'Artlist — музыка и SFX',
+        ],
+        itemsEn: [
+          'ElevenLabs — voiceover',
+          'Artlist — music and SFX',
+        ],
+      },
+      {
+        category: 'ПОСТПРОДАКШЕН',
+        categoryEn: 'POST-PRODUCTION',
+        items: [
+          'Final Cut Pro — монтаж, сведение',
+          'Ableton Live — мастеринг',
+        ],
+        itemsEn: [
+          'Final Cut Pro — editing, mixing',
+          'Ableton Live — mastering',
         ],
       },
     ],

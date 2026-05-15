@@ -19,13 +19,13 @@ export default function Cases() {
           <Link
             key={c.id}
             href={`/cases/${c.id}`}
-            className="group relative aspect-video overflow-hidden block"
+            className={`group relative aspect-video overflow-hidden block${c.fullWidth ? ' md:col-span-2' : ''}`}
           >
             <Image
               src={c.posterSrc}
               alt={language === 'ru' ? c.titleRu : c.titleEn}
               fill
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes={c.fullWidth ? '100vw' : '(max-width: 768px) 100vw, 50vw'}
               className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-graphite/90 via-graphite/20 to-transparent" />
