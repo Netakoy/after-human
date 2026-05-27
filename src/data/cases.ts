@@ -112,7 +112,7 @@ export const casesData: CaseData[] = [
       'Most of the time went not into visuals, but into emotion: accurate facial expressions, natural voice, lip sync, street sounds, music, details. After Human was born from this project.',
       'We made a documentary about AI models — with a narrative, voiceover, and an atmosphere almost like a Netflix doc. Most of the time wasn\'t spent on visuals, but on emotion: a natural voice, correct facial expressions, realistic lip sync, street sounds, music, details. After Human was born from this project.',
     ],
-    videos: ['woSrEnNNVNBtD4gSbskW1q'],
+    videos: ['hviAyE5RvDTfUJkRK7RMFo'],
     posterSrc: '/images/cases/ai.png',
     gallery: [
       '/images/cases/ai-doc/1.png',
