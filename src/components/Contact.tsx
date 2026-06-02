@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { useLanguage } from '@/lib/language'
 
 interface FormState {
@@ -105,13 +106,21 @@ export default function Contact() {
               <p className="font-unbounded text-xs text-red-400">{t.contact.error}</p>
             )}
 
-            <button
-              type="submit"
-              disabled={status === 'loading'}
-              className="font-unbounded text-sm tracking-[0.2em] text-graphite bg-muted-white px-10 py-4 hover:bg-white hover:scale-[1.02] transition-all duration-200 disabled:opacity-50"
-            >
-              {status === 'loading' ? '...' : t.contact.submit}
-            </button>
+            <div className="space-y-3">
+              <button
+                type="submit"
+                disabled={status === 'loading'}
+                className="font-unbounded text-sm tracking-[0.2em] text-graphite bg-muted-white px-10 py-4 hover:bg-white hover:scale-[1.02] transition-all duration-200 disabled:opacity-50"
+              >
+                {status === 'loading' ? '...' : t.contact.submit}
+              </button>
+              <p className="font-unbounded text-[9px] text-silver/30 leading-relaxed">
+                Нажимая «{t.contact.submit}», вы соглашаетесь с{' '}
+                <Link href="/privacy" className="underline underline-offset-2 hover:text-silver/50 transition-colors">
+                  политикой обработки персональных данных
+                </Link>
+              </p>
+            </div>
           </form>
         )}
       </div>

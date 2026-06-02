@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import Showreel from '@/components/Showreel'
@@ -20,6 +21,15 @@ export default function Home() {
       <Pricing />
       <Contact />
       <ContactModal />
+      <footer className="page-pad py-6 border-t border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+        <span className="font-unbounded text-[10px] tracking-[0.2em] text-silver/30">© {new Date().getFullYear()} AFTER HUMAN</span>
+        <Link
+          href="/privacy"
+          className="font-unbounded text-[10px] tracking-[0.2em] text-silver/30 hover:text-silver/60 transition-colors"
+        >
+          ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+        </Link>
+      </footer>
     </main>
   )
 }
