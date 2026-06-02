@@ -79,9 +79,9 @@ export interface Messages {
       musicAi: string
       musicLicensed: string
       editing: string
-      colorGrading: string
     }
     total: string
+    disclaimer: string
     cta: string
   }
 }

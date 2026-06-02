@@ -81,9 +81,9 @@ export const en: Messages = {
       musicAi: 'Music (AI)',
       musicLicensed: 'Licensed music',
       editing: 'Editing',
-      colorGrading: 'Color grading',
     },
     total: 'TOTAL',
+    disclaimer: '* Estimated cost. Final price is calculated individually for each project.',
     cta: 'DISCUSS A PROJECT',
   },
 }

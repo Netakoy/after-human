@@ -312,8 +312,54 @@ export const casesData: CaseData[] = [
     ],
   },
   {
-    id: 'dom',
+    id: 'chery-tiggo',
     index: '005',
+    titleRu: 'CHERY TIGGO 7 PRO',
+    titleEn: 'CHERY TIGGO 7 PRO',
+    descriptionRu: [
+      'Креативная версия рекламного ролика, реализованная за 4 дня.',
+      'В центре сюжета — деревенская бабушка, которая уверенно управляет современным кроссовером, демонстрируя его универсальность и простоту в использовании. От сельских дорог до Москвы — один автомобиль для повседневных задач, поездок и покупок.',
+      'Весь видеоконтент создан с использованием только Seedance 2.0 — одной из самых передовых нейросетей для генерации видео на момент создания ролика.',
+    ],
+    descriptionEn: [
+      'A creative commercial produced in just 4 days.',
+      'At the center of the story is a village grandmother who confidently drives a modern crossover, showcasing its versatility and ease of use. From rural roads to Moscow — one car for everyday errands, trips, and shopping.',
+      'All video content was created using Seedance 2.0 only — one of the most advanced AI video generation models at the time of production.',
+    ],
+    videos: ['oJC7AtxmdiN3kHTBZbGaqr'],
+    posterSrc: '/images/cases/chery.png',
+    gallery: [
+      '/images/cases/chery/1.png',
+      '/images/cases/chery/2.png',
+      '/images/cases/chery/3.png',
+      '/images/cases/chery/4.png',
+    ],
+    pipeline: [
+      {
+        category: 'ВИДЕО',
+        categoryEn: 'VIDEO',
+        items: [
+          'Seedance 2.0 — генерация всего видеоконтента',
+        ],
+        itemsEn: [
+          'Seedance 2.0 — all video content generation',
+        ],
+      },
+      {
+        category: 'ПОСТПРОДАКШЕН',
+        categoryEn: 'POST-PRODUCTION',
+        items: [
+          'Final Cut Pro — монтаж, сведение',
+        ],
+        itemsEn: [
+          'Final Cut Pro — editing, mixing',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'dom',
+    index: '006',
     titleRu: 'РЕСТОРАН DOM',
     titleEn: 'RESTAURANT DOM',
     fullWidth: true,

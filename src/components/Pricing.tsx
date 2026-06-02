@@ -11,7 +11,6 @@ interface Options {
   musicAi: boolean
   musicLicensed: boolean
   editing: boolean
-  colorGrading: boolean
 }
 
 function calcTotal(duration: number, opts: Options): number {
@@ -22,9 +21,8 @@ function calcTotal(duration: number, opts: Options): number {
   const soundDesign = opts.soundDesign ? Math.max(5_000, Math.ceil(duration / 10) * 1_000) : 0
   const musicAi = opts.musicAi ? Math.max(3_000, Math.ceil(duration / 10) * 500) : 0
   const musicLicensed = opts.musicLicensed ? 3_000 : 0
-  const editing = opts.editing ? Math.max(5_000, Math.ceil(duration / 10) * 1_000) : 0
-  const colorGrading = opts.colorGrading ? Math.max(3_000, Math.ceil(duration / 10) * 1_000) : 0
-  return base + script + character + extraChars + soundDesign + musicAi + musicLicensed + editing + colorGrading
+  const editing = opts.editing ? Math.max(12_000, Math.ceil(duration / 10) * 1_000) : 0
+  return base + script + character + extraChars + soundDesign + musicAi + musicLicensed + editing
 }
 
 function formatPrice(total: number, lang: string): string {
@@ -38,7 +36,7 @@ export default function Pricing() {
   const [opts, setOpts] = useState<Options>({
     script: false, character: false, extraCharacters: 0,
     soundDesign: false, musicAi: false, musicLicensed: false,
-    editing: false, colorGrading: false,
+    editing: false,
   })
   const [displayPrice, setDisplayPrice] = useState('')
   const priceRef = useRef<HTMLSpanElement>(null)
@@ -59,7 +57,7 @@ export default function Pricing() {
     }
   }, [total, language])
 
-  const toggle = (key: keyof Pick<Options, 'script' | 'character' | 'soundDesign' | 'musicAi' | 'musicLicensed' | 'editing' | 'colorGrading'>) => {
+  const toggle = (key: keyof Pick<Options, 'script' | 'character' | 'soundDesign' | 'musicAi' | 'musicLicensed' | 'editing'>) => {
     setOpts((prev) => {
       const next = { ...prev, [key]: !prev[key] }
       if (key === 'musicAi' && next.musicAi) next.musicLicensed = false
@@ -76,7 +74,7 @@ export default function Pricing() {
     </div>
   )
 
-  const Row = ({ optKey, label }: { optKey: keyof Pick<Options, 'script' | 'character' | 'soundDesign' | 'musicAi' | 'musicLicensed' | 'editing' | 'colorGrading'>, label: string }) => (
+  const Row = ({ optKey, label }: { optKey: keyof Pick<Options, 'script' | 'character' | 'soundDesign' | 'musicAi' | 'musicLicensed' | 'editing'>, label: string }) => (
     <div className="flex items-center gap-3 cursor-pointer group" onClick={() => toggle(optKey)}>
       <Checkbox checked={opts[optKey] as boolean} />
       <span className="font-unbounded text-sm text-silver/70 group-hover:text-white transition-colors">{label}</span>
@@ -142,7 +140,6 @@ export default function Pricing() {
             <Row optKey="musicAi" label={t.pricing.options.musicAi} />
             <Row optKey="musicLicensed" label={t.pricing.options.musicLicensed} />
             <Row optKey="editing" label={t.pricing.options.editing} />
-            <Row optKey="colorGrading" label={t.pricing.options.colorGrading} />
           </div>
 
           {/* Total */}
@@ -152,6 +149,7 @@ export default function Pricing() {
               {displayPrice}
             </span>
           </div>
+          <p className="mt-3 font-unbounded text-[10px] text-silver/40 leading-relaxed">{t.pricing.disclaimer}</p>
         </div>
 
         {/* CTA */}
