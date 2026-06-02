@@ -6,6 +6,7 @@ import ScrollIndicator from '@/components/ScrollIndicator'
 import NoiseOverlay from '@/components/NoiseOverlay'
 import GradientBackground from '@/components/GradientBackground'
 import TelegramPopup from '@/components/TelegramPopup'
+import Script from 'next/script'
 import './globals.css'
 
 const unbounded = Unbounded({
@@ -38,6 +39,13 @@ export default function RootLayout({
         <link rel="preconnect" href="https://kinescope.io" />
         <link rel="dns-prefetch" href="https://kinescope.io" />
       </head>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-6VC4169TRT" strategy="afterInteractive" />
+      <Script id="google-analytics" strategy="afterInteractive">{`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6VC4169TRT');
+      `}</Script>
       <body>
         <LanguageProvider>
           <SoundProvider />
