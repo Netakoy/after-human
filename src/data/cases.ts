@@ -326,7 +326,7 @@ export const casesData: CaseData[] = [
       'At the center of the story is a village grandmother who confidently drives a modern crossover, showcasing its versatility and ease of use. From rural roads to Moscow — one car for everyday errands, trips, and shopping.',
       'All video content was created using Seedance 2.0 only — one of the most advanced AI video generation models at the time of production.',
     ],
-    videos: ['oJC7AtxmdiN3kHTBZbGaqr'],
+    videos: ['iKBruCxTyGec34xSAo6hmx'],
     posterSrc: '/images/cases/chery.png',
     gallery: [
       '/images/cases/chery/1.png',
