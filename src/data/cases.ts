@@ -425,4 +425,136 @@ export const casesData: CaseData[] = [
       },
     ],
   },
+  {
+    id: 'eileen-fisher',
+    index: '007',
+    titleRu: 'EILEEN FISHER',
+    titleEn: 'EILEEN FISHER',
+    descriptionRu: [
+      'Во время экспериментов с различными AI-визуалами мы заметили, что самые тёплые и атмосферные кадры часто объединяет одежда из натуральных материалов — льна, хлопка и других естественных тканей. Это вдохновило нас найти бренд, чья философия построена вокруг такой эстетики.',
+      'Так мы выбрали EILEEN FISHER — американский бренд, основанный в Нью-Йорке в 1984 году. Он известен своим минималистичным дизайном, натуральными материалами и спокойной, естественной визуальной эстетикой.',
+      'Для проекта мы создали тёплый рекламный ролик с закадровым голосом. В качестве референсов использовались образы и одежда с официального сайта и Instagram бренда. Все модели и персонажи в видео были полностью созданы с помощью искусственного интеллекта.',
+    ],
+    descriptionEn: [
+      'While experimenting with various AI visuals, we noticed that the warmest and most atmospheric shots often shared one thing in common: clothing made from natural materials — linen, cotton, and other organic fabrics. This inspired us to find a brand whose philosophy is built around that very aesthetic.',
+      'We chose EILEEN FISHER — an American brand founded in New York in 1984, known for its minimalist design, natural materials, and calm, effortless visual identity.',
+      'For the project, we created a warm brand film with a voiceover. References were drawn from imagery and clothing featured on the brand\'s official website and Instagram. All models and characters in the video were created entirely using artificial intelligence.',
+    ],
+    videos: ['6en8vBqfP9r1DtjS6Cq3nb'],
+    posterSrc: '/images/cases/eileen-fisher/1.png',
+    gallery: [
+      '/images/cases/eileen-fisher/1.png',
+      '/images/cases/eileen-fisher/2.png',
+      '/images/cases/eileen-fisher/3.png',
+      '/images/cases/eileen-fisher/4.png',
+    ],
+    pipeline: [
+      {
+        category: 'ВИДЕО И ВИЗУАЛИЗАЦИЯ',
+        categoryEn: 'VIDEO & VISUALIZATION',
+        items: [
+          'ChatGPT — концепция, промты',
+          'Midjourney, NanoBanana Pro — референсы и раскадровка',
+          'Runway ML, Kling — кинематографические сцены',
+          'Topaz Video AI — апскейл до 4K',
+        ],
+        itemsEn: [
+          'ChatGPT — concept, prompts',
+          'Midjourney, NanoBanana Pro — references and storyboard',
+          'Runway ML, Kling — cinematic scenes',
+          'Topaz Video AI — upscale to 4K',
+        ],
+      },
+      {
+        category: 'САУНД ДИЗАЙН',
+        categoryEn: 'SOUND DESIGN',
+        items: [
+          'ElevenLabs — закадровый голос',
+          'Suno — музыка',
+          'Artlist — SFX',
+        ],
+        itemsEn: [
+          'ElevenLabs — voiceover',
+          'Suno — music',
+          'Artlist — SFX',
+        ],
+      },
+      {
+        category: 'ПОСТПРОДАКШЕН',
+        categoryEn: 'POST-PRODUCTION',
+        items: [
+          'Final Cut Pro — монтаж, сведение',
+          'Ableton Live — мастеринг',
+        ],
+        itemsEn: [
+          'Final Cut Pro — editing, mixing',
+          'Ableton Live — mastering',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'day-off',
+    index: '008',
+    titleRu: 'DAY OFF — NOSE PERFUMES',
+    titleEn: 'DAY OFF — NOSE PERFUMES',
+    descriptionRu: [
+      'Рекламный ролик для соц сетей парфюма Nose Perfumes, в котором нам удалось отразить прелести дней "ничего не делания". Само название аромата Day Off побудило нас искать и найти романтику в те моменты, когда казалось бы пустой день может принести человеку радость и наслаждение.',
+    ],
+    descriptionEn: [
+      'A social media ad for Nose Perfumes\' Day Off fragrance — a film about the beauty of doing nothing. The name itself led us to look for, and find, the romance in those moments when an empty day can still bring genuine joy and pleasure.',
+    ],
+    videos: ['rkJSjjNHxb19WfQKgHgwAL'],
+    posterSrc: '/images/cases/day-off/1.png',
+    gallery: [
+      '/images/cases/day-off/1.png',
+      '/images/cases/day-off/2.png',
+      '/images/cases/day-off/3.png',
+      '/images/cases/day-off/4.png',
+    ],
+    pipeline: [
+      {
+        category: 'ВИДЕО И ВИЗУАЛИЗАЦИЯ',
+        categoryEn: 'VIDEO & VISUALIZATION',
+        items: [
+          'ChatGPT — концепция, промты',
+          'Midjourney, NanoBanana Pro — референсы и раскадровка',
+          'Runway ML, Kling — кинематографические сцены',
+          'Topaz Video AI — апскейл до 4K',
+        ],
+        itemsEn: [
+          'ChatGPT — concept, prompts',
+          'Midjourney, NanoBanana Pro — references and storyboard',
+          'Runway ML, Kling — cinematic scenes',
+          'Topaz Video AI — upscale to 4K',
+        ],
+      },
+      {
+        category: 'САУНД ДИЗАЙН',
+        categoryEn: 'SOUND DESIGN',
+        items: [
+          'ElevenLabs — закадровый голос',
+          'Suno — музыка',
+          'Artlist — SFX',
+        ],
+        itemsEn: [
+          'ElevenLabs — voiceover',
+          'Suno — music',
+          'Artlist — SFX',
+        ],
+      },
+      {
+        category: 'ПОСТПРОДАКШЕН',
+        categoryEn: 'POST-PRODUCTION',
+        items: [
+          'Final Cut Pro — монтаж, сведение',
+          'Ableton Live — мастеринг',
+        ],
+        itemsEn: [
+          'Final Cut Pro — editing, mixing',
+          'Ableton Live — mastering',
+        ],
+      },
+    ],
+  },
 ]

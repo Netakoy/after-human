@@ -16,11 +16,11 @@ const LanguageContext = createContext<LanguageContextValue | null>(null)
 const STORAGE_KEY = 'ah-lang'
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('ru')
+  const [language, setLanguage] = useState<Language>('en')
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY) as Language | null
-    if (stored === 'en') setLanguage('en')
+    if (stored === 'ru' || stored === 'en') setLanguage(stored)
   }, [])
 
   const toggle = () => {

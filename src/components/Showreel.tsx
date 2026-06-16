@@ -5,10 +5,11 @@ import { useLanguage } from '@/lib/language'
 import KinescopePlayer from './KinescopePlayer'
 import { initGSAP, gsap } from '@/lib/gsap-init'
 
-const SHOWREEL_KINESCOPE_ID = 'dkH3YyoUNNbtjFtX6VLfar'
+const SHOWREEL_RU_ID = 'dkH3YyoUNNbtjFtX6VLfar'
+const SHOWREEL_EN_ID = '6gAh4x55piyA3zZ9FEw5YL'
 
 export default function Showreel() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
   const sectionRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
@@ -37,7 +38,7 @@ export default function Showreel() {
   return (
     <section id="showreel" ref={sectionRef} className="relative h-screen bg-graphite" style={{ opacity: 0 }}>
       <KinescopePlayer
-        videoId={SHOWREEL_KINESCOPE_ID}
+        videoId={language === 'ru' ? SHOWREEL_RU_ID : SHOWREEL_EN_ID}
         poster="/images/cases/showreel-poster.png"
         showPlayButton={true}
         playLabel={t.showreel.label}
