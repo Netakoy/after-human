@@ -118,7 +118,7 @@ export const en: Messages = {
         timeline: 'scoped per brief',
       },
     ],
-    note: 'Cost is estimated per brief',
+    note: 'Any brief — from a company documentary to a music video. Format and cost are scoped per task',
     cta: 'DISCUSS A PROJECT',
   },
 }
