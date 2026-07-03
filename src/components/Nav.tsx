@@ -44,7 +44,7 @@ export default function Nav() {
   const navItems = [
     { label: t.nav.work, id: 'cases' },
     { label: t.nav.process, id: 'process' },
-    { label: t.nav.pricing, id: 'pricing' },
+    { label: t.nav.formats, id: 'formats' },
     { label: t.nav.contact, id: 'contact' },
   ]
 

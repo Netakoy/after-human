@@ -4,18 +4,17 @@ export const en: Messages = {
   nav: {
     work: 'WORK',
     process: 'PROCESS',
-    pricing: 'PRICING',
+    formats: 'FORMATS',
     contact: 'CONTACT',
   },
   hero: {
-    tagline: 'AI PRODUCTION STUDIO',
     scroll: 'SCROLL',
-    badge: 'AI FULL-CYCLE PRODUCTION',
-    description: 'After Human — a studio that solves briefs for agencies and brands. One contractor from idea to final cut.',
+    badge: 'PRODUCTION PARTNER\nFOR AD AGENCIES',
+    description: 'We help agencies quickly turn ideas into films, pitch films, key visuals and visual worlds for campaigns.',
     stats: [
       { value: '3–7', unit: 'DAYS', label: 'per 1 min. video' },
       { value: '4K', unit: '', label: 'final master' },
-      { value: '10–20×', unit: '', label: 'vs. traditional' },
+      { value: '0', unit: 'RESHOOTS', label: 'revisions without a new budget' },
     ],
     cta: {
       showreel: 'WATCH SHOWREEL',
@@ -39,12 +38,12 @@ export const en: Messages = {
       {
         number: '02',
         label: 'IDEA',
-        description: 'We dive into the brief and form a visual concept',
+        description: 'We dive into the brief and build a full concept: meaning, dramaturgy, visual style, characters, key scenes, emotional hooks and the overall directorial logic of the film.',
       },
       {
         number: '03',
         label: 'DIRECTION',
-        description: 'Storyboard, references, visual direction development',
+        description: 'Storyboard, references, visual direction. Key scenes are approved before generation starts.',
       },
       {
         number: '04',
@@ -55,6 +54,32 @@ export const en: Messages = {
         number: '05',
         label: 'DELIVERY',
         description: 'Files delivered in required formats and adaptations',
+      },
+    ],
+  },
+  scenarios: {
+    label: 'SCENARIOS',
+    title: 'WHEN YOU NEED US',
+    items: [
+      {
+        number: '01',
+        label: 'TENDER OR PITCH',
+        description: 'Show the client the idea as film, not slides — within days.',
+      },
+      {
+        number: '02',
+        label: 'TIGHT DEADLINE',
+        description: 'When campaign timing leaves no room for traditional production.',
+      },
+      {
+        number: '03',
+        label: "WORLDS YOU CAN'T FILM",
+        description: 'Any location, era and atmosphere — no shoots, no logistics.',
+      },
+      {
+        number: '04',
+        label: 'TESTING A DIRECTION',
+        description: 'Validate a visual hypothesis before committing a big budget.',
       },
     ],
   },
@@ -69,21 +94,31 @@ export const en: Messages = {
     success: 'Request sent. We will get back to you within 24 hours.',
     error: 'Send error. Please contact us directly.',
   },
-  pricing: {
-    title: 'PRICING',
-    subtitle: 'Calculate your project cost',
-    slider: { label: 'Video duration', unit: 'sec' },
-    options: {
-      script: 'Script',
-      character: 'Characters',
-      extraCharacters: 'extra characters',
-      soundDesign: 'Sound design',
-      musicAi: 'Music (AI)',
-      musicLicensed: 'Licensed music',
-      editing: 'Editing',
-    },
-    total: 'TOTAL',
-    disclaimer: '* Estimated cost. Final price is calculated individually for each project.',
+  formats: {
+    title: 'FORMATS',
+    items: [
+      {
+        title: 'BRAND FILM / COMMERCIAL',
+        description: 'From idea to a 4K master: concept, direction, generation, editing, sound.',
+        timeline: '1–2 weeks',
+      },
+      {
+        title: 'PITCH / MOOD FILM',
+        description: 'Show the client the idea before full production: tenders, pitches, presentations.',
+        timeline: '3–7 days',
+      },
+      {
+        title: 'KEY VISUALS + SOCIAL',
+        description: "The campaign's visual language: key images and social media adaptations.",
+        timeline: '3–5 days',
+      },
+      {
+        title: 'SCREEN CONTENT / VISUAL WORLDS',
+        description: "Content for events, screens and installations: worlds that can't be filmed.",
+        timeline: 'scoped per brief',
+      },
+    ],
+    note: 'Any brief — from a company documentary to a music video. Format and cost are scoped per task',
     cta: 'DISCUSS A PROJECT',
   },
 }

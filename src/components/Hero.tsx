@@ -50,7 +50,7 @@ export default function Hero() {
         <span
           ref={badgeRef}
           style={{ opacity: 0, alignSelf: 'flex-start' }}
-          className="font-unbounded text-sm tracking-[0.15em] text-silver uppercase"
+          className="font-unbounded text-sm tracking-[0.15em] text-silver uppercase whitespace-pre-line"
         >
           {t.hero.badge}
         </span>

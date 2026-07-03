@@ -3,9 +3,9 @@ import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import Showreel from '@/components/Showreel'
 import Cases from '@/components/Cases'
-import Comparison from '@/components/Comparison'
+import Scenarios from '@/components/Scenarios'
 import Process from '@/components/Process'
-import Pricing from '@/components/Pricing'
+import Formats from '@/components/Formats'
 import Contact from '@/components/Contact'
 import ContactModal from '@/components/ContactModal'
 
@@ -16,9 +16,9 @@ export default function Home() {
       <Hero />
       <Showreel />
       <Cases />
-      <Comparison />
+      <Scenarios />
       <Process />
-      <Pricing />
+      <Formats />
       <Contact />
       <ContactModal />
       <footer className="page-pad py-6 border-t border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
