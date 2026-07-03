@@ -28,7 +28,6 @@ export interface Messages {
     contact: string
   }
   hero: {
-    tagline: string
     scroll: string
     badge: string
     description: string

@@ -8,9 +8,8 @@ export const ru: Messages = {
     contact: 'КОНТАКТ',
   },
   hero: {
-    tagline: 'AI-FIRST CREATIVE PRODUCTION',
     scroll: 'SCROLL',
-    badge: 'PRODUCTION-ПАРТНЁР ДЛЯ РЕКЛАМНЫХ АГЕНТСТВ',
+    badge: 'PRODUCTION-ПАРТНЁР\nДЛЯ РЕКЛАМНЫХ АГЕНТСТВ',
     description: 'Помогаем агентствам быстро превращать идеи в ролики, pitch films, key visuals и визуальные миры для кампаний.',
     stats: [
       { value: '3–7', unit: 'ДНЕЙ', label: 'на 1 мин. видео' },

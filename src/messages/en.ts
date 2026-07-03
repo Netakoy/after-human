@@ -8,9 +8,8 @@ export const en: Messages = {
     contact: 'CONTACT',
   },
   hero: {
-    tagline: 'AI-FIRST CREATIVE PRODUCTION',
     scroll: 'SCROLL',
-    badge: 'PRODUCTION PARTNER FOR AD AGENCIES',
+    badge: 'PRODUCTION PARTNER\nFOR AD AGENCIES',
     description: 'We help agencies quickly turn ideas into films, pitch films, key visuals and visual worlds for campaigns.',
     stats: [
       { value: '3–7', unit: 'DAYS', label: 'per 1 min. video' },
