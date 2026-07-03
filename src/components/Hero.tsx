@@ -69,6 +69,9 @@ export default function Hero() {
         </div>
 
         <div ref={contentRef} style={{ opacity: 0 }} className="flex flex-col gap-6">
+          <p className="font-unbounded text-xs tracking-[0.3em] text-silver uppercase">
+            {t.hero.tagline}
+          </p>
           <p className="font-unbounded text-sm text-muted-white leading-relaxed">
             {t.hero.description}
           </p>

@@ -8,14 +8,14 @@ export const en: Messages = {
     contact: 'CONTACT',
   },
   hero: {
-    tagline: 'AI PRODUCTION STUDIO',
+    tagline: 'AI-FIRST CREATIVE PRODUCTION',
     scroll: 'SCROLL',
-    badge: 'AI FULL-CYCLE PRODUCTION',
-    description: 'After Human — a studio that solves briefs for agencies and brands. One contractor from idea to final cut.',
+    badge: 'PRODUCTION PARTNER FOR AD AGENCIES',
+    description: 'We help agencies quickly turn ideas into films, pitch films, key visuals and visual worlds for campaigns.',
     stats: [
       { value: '3–7', unit: 'DAYS', label: 'per 1 min. video' },
       { value: '4K', unit: '', label: 'final master' },
-      { value: '10–20×', unit: '', label: 'vs. traditional' },
+      { value: '0', unit: 'RESHOOTS', label: 'revisions without a new budget' },
     ],
     cta: {
       showreel: 'WATCH SHOWREEL',

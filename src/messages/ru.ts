@@ -8,14 +8,14 @@ export const ru: Messages = {
     contact: 'КОНТАКТ',
   },
   hero: {
-    tagline: 'AI PRODUCTION STUDIO',
+    tagline: 'AI-FIRST CREATIVE PRODUCTION',
     scroll: 'SCROLL',
-    badge: 'AI PRODUCTION ПОЛНОГО ЦИКЛА',
-    description: 'After Human — студия, которая закрывает задачи агентств и брендов. Один подрядчик от идеи до финального ролика.',
+    badge: 'PRODUCTION-ПАРТНЁР ДЛЯ РЕКЛАМНЫХ АГЕНТСТВ',
+    description: 'Помогаем агентствам быстро превращать идеи в ролики, pitch films, key visuals и визуальные миры для кампаний.',
     stats: [
       { value: '3–7', unit: 'ДНЕЙ', label: 'на 1 мин. видео' },
       { value: '4K', unit: '', label: 'финальный мастер' },
-      { value: 'В 10–20×', unit: '', label: 'дешевле классического продакшна' },
+      { value: '0', unit: 'ПЕРЕСЪЁМОК', label: 'правки без нового бюджета' },
     ],
     cta: {
       showreel: 'СМОТРЕТЬ ШОУРИЛЛ',
