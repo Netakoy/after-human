@@ -58,6 +58,32 @@ export const en: Messages = {
       },
     ],
   },
+  scenarios: {
+    label: 'SCENARIOS',
+    title: 'WHEN YOU NEED US',
+    items: [
+      {
+        number: '01',
+        label: 'TENDER OR PITCH',
+        description: 'Show the client the idea as film, not slides — within days.',
+      },
+      {
+        number: '02',
+        label: 'TIGHT DEADLINE',
+        description: 'When campaign timing leaves no room for traditional production.',
+      },
+      {
+        number: '03',
+        label: "WORLDS YOU CAN'T FILM",
+        description: 'Any location, era and atmosphere — no shoots, no logistics.',
+      },
+      {
+        number: '04',
+        label: 'TESTING A DIRECTION',
+        description: 'Validate a visual hypothesis before committing a big budget.',
+      },
+    ],
+  },
   contact: {
     title: 'DISCUSS A PROJECT',
     name: 'Name',

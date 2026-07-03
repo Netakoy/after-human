@@ -56,6 +56,15 @@ export interface Messages {
       description: string
     }[]
   }
+  scenarios: {
+    label: string
+    title: string
+    items: {
+      number: string
+      label: string
+      description: string
+    }[]
+  }
   contact: {
     title: string
     name: string

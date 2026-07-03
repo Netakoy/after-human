@@ -3,7 +3,7 @@ import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import Showreel from '@/components/Showreel'
 import Cases from '@/components/Cases'
-import Comparison from '@/components/Comparison'
+import Scenarios from '@/components/Scenarios'
 import Process from '@/components/Process'
 import Formats from '@/components/Formats'
 import Contact from '@/components/Contact'
@@ -16,7 +16,7 @@ export default function Home() {
       <Hero />
       <Showreel />
       <Cases />
-      <Comparison />
+      <Scenarios />
       <Process />
       <Formats />
       <Contact />
