@@ -44,7 +44,7 @@ export const ru: Messages = {
       {
         number: '03',
         label: 'РЕЖИССУРА',
-        description: 'Разрабатываем storyboard, референсы, visual direction',
+        description: 'Разрабатываем storyboard, референсы, visual direction. Согласовываем ключевые сцены до запуска генерации.',
       },
       {
         number: '04',

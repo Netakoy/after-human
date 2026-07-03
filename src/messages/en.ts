@@ -39,12 +39,12 @@ export const en: Messages = {
       {
         number: '02',
         label: 'IDEA',
-        description: 'We dive into the brief and form a visual concept',
+        description: 'We dive into the brief and build a full concept: meaning, dramaturgy, visual style, characters, key scenes, emotional hooks and the overall directorial logic of the film.',
       },
       {
         number: '03',
         label: 'DIRECTION',
-        description: 'Storyboard, references, visual direction development',
+        description: 'Storyboard, references, visual direction. Key scenes are approved before generation starts.',
       },
       {
         number: '04',
