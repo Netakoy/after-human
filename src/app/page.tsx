@@ -5,7 +5,7 @@ import Showreel from '@/components/Showreel'
 import Cases from '@/components/Cases'
 import Comparison from '@/components/Comparison'
 import Process from '@/components/Process'
-import Pricing from '@/components/Pricing'
+import Formats from '@/components/Formats'
 import Contact from '@/components/Contact'
 import ContactModal from '@/components/ContactModal'
 
@@ -18,7 +18,7 @@ export default function Home() {
       <Cases />
       <Comparison />
       <Process />
-      <Pricing />
+      <Formats />
       <Contact />
       <ContactModal />
       <footer className="page-pad py-6 border-t border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">

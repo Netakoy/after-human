@@ -4,7 +4,7 @@ export const en: Messages = {
   nav: {
     work: 'WORK',
     process: 'PROCESS',
-    pricing: 'PRICING',
+    formats: 'FORMATS',
     contact: 'CONTACT',
   },
   hero: {
@@ -69,21 +69,31 @@ export const en: Messages = {
     success: 'Request sent. We will get back to you within 24 hours.',
     error: 'Send error. Please contact us directly.',
   },
-  pricing: {
-    title: 'PRICING',
-    subtitle: 'Calculate your project cost',
-    slider: { label: 'Video duration', unit: 'sec' },
-    options: {
-      script: 'Script',
-      character: 'Characters',
-      extraCharacters: 'extra characters',
-      soundDesign: 'Sound design',
-      musicAi: 'Music (AI)',
-      musicLicensed: 'Licensed music',
-      editing: 'Editing',
-    },
-    total: 'TOTAL',
-    disclaimer: '* Estimated cost. Final price is calculated individually for each project.',
+  formats: {
+    title: 'FORMATS',
+    items: [
+      {
+        title: 'BRAND FILM / COMMERCIAL',
+        description: 'From idea to a 4K master: concept, direction, generation, editing, sound.',
+        timeline: '1–2 weeks',
+      },
+      {
+        title: 'PITCH / MOOD FILM',
+        description: 'Show the client the idea before full production: tenders, pitches, presentations.',
+        timeline: '3–7 days',
+      },
+      {
+        title: 'KEY VISUALS + SOCIAL',
+        description: "The campaign's visual language: key images and social media adaptations.",
+        timeline: '3–5 days',
+      },
+      {
+        title: 'SCREEN CONTENT / VISUAL WORLDS',
+        description: "Content for events, screens and installations: worlds that can't be filmed.",
+        timeline: 'scoped per brief',
+      },
+    ],
+    note: 'Cost is estimated per brief',
     cta: 'DISCUSS A PROJECT',
   },
 }

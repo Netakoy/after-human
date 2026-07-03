@@ -24,7 +24,7 @@ export interface Messages {
   nav: {
     work: string
     process: string
-    pricing: string
+    formats: string
     contact: string
   }
   hero: {
@@ -67,21 +67,14 @@ export interface Messages {
     success: string
     error: string
   }
-  pricing: {
+  formats: {
     title: string
-    subtitle: string
-    slider: { label: string; unit: string }
-    options: {
-      script: string
-      character: string
-      extraCharacters: string
-      soundDesign: string
-      musicAi: string
-      musicLicensed: string
-      editing: string
-    }
-    total: string
-    disclaimer: string
+    items: {
+      title: string
+      description: string
+      timeline: string
+    }[]
+    note: string
     cta: string
   }
 }
