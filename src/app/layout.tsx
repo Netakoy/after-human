@@ -16,11 +16,11 @@ const unbounded = Unbounded({
 })
 
 export const metadata: Metadata = {
-  title: 'After Human — AI Production Studio',
-  description: 'Cinematic AI-video для агентств и брендов. Визуальная режиссура и production quality.',
+  title: 'After Human — AI-First Creative Production',
+  description: 'Production-партнёр для рекламных агентств: ролики, pitch films, key visuals и визуальные миры кампаний.',
   openGraph: {
-    title: 'After Human — AI Production Studio',
-    description: 'Cinematic AI-video для агентств и брендов.',
+    title: 'After Human — AI-First Creative Production',
+    description: 'Production-партнёр для рекламных агентств: ролики, pitch films, key visuals и визуальные миры кампаний.',
     url: 'https://afterhuman.pro',
     siteName: 'After Human',
     locale: 'ru_RU',
